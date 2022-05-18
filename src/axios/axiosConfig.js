@@ -1,7 +1,6 @@
 import axios from "axios";
 
-// const baseURL = "https://morning-ravine-10562.herokuapp.com/";
-const baseURL = " https://rocky-shelf-17953.herokuapp.com/";
+const baseURL = "https://rocky-journey-92122.herokuapp.com/";
 
 const app = axios.create({
   baseURL,
