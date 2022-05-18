@@ -1,7 +1,7 @@
 <template lang="">
   <div class="w-full h-full relative">
     <div
-      class="relative h-40 w-full bg-[url('src/assets/banner.jpg')] bg-no-repeat bg-cover bg-center"
+      class="relative h-40 w-full bg-[url('/src/assets/banner.jpg')] bg-no-repeat bg-cover bg-center"
     >
       <div class="h-full">
         <span
