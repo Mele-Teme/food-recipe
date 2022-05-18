@@ -130,7 +130,7 @@ function setVariable(_catagory, _filter, _search) {
 }
 
 function handleClick(id) {
-  router.push("/detail?id="+id);
+  router.push("detail?id="+id);
 }
 </script>
 <style>
