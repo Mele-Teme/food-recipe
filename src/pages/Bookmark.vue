@@ -80,7 +80,6 @@ import { bookmarkQl } from "../data/qlOperations/query";
 const router = useRouter();
 const store = useStore();
 const bookmarkCount = ref(0);
-add_book
 function handleClick(id) {
   router.push("/detail?id="+id);
 }
