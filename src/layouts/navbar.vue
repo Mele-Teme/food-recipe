@@ -79,7 +79,7 @@
       Food Recipe
     </h1>
     <button
-      class="mr-10 w-fit font-semibold border-2 border-black hover:bg-black hover:text-white py-1 px-4"
+      class="mr-2 w-fit font-semibold border-2 border-black hover:bg-black hover:text-white py-1 px-4"
       @click="login"
     >
       LogIn
