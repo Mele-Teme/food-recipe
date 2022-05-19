@@ -31,7 +31,7 @@
         class="w-full h-full flex justify-center items-center flex-col"
       >
         <img
-          src="/src/assets/add_recipe1.png"
+          src="https://i.ibb.co/LZPCQcF/add-recipe1.png"
           alt=""
           srcset=""
           class="w-60 object-cover"
