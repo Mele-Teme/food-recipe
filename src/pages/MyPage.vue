@@ -30,12 +30,6 @@
         v-if="recipe.length == 0 && !loading"
         class="w-full h-full flex justify-center items-center flex-col"
       >
-        <img
-          src="https://i.ibb.co/V2VjmMX/chef-boy-looking-over-an-empty-plate-vector-28711429.jpg"
-          alt=""
-          srcset=""
-          class="w-60 object-cover"
-        />
         <h2 class="font-semibold text-xl text-slate-500">
           You don't have any Recipe
         </h2>

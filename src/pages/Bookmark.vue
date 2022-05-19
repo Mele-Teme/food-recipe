@@ -24,12 +24,7 @@
       v-if="recipe.length == 0 && !loading"
       class="w-full h-full flex justify-center items-center flex-col mt-14"
     >
-      <img
-        src="/src/assets/add_bookmark.jpg"
-        alt=""
-        srcset=""
-        class="w-52 h-52"
-      />
+    
       <h2 class="font-semibold text-xl text-slate-700">
         Bookmark List Record is Empty
       </h2>
