@@ -1,5 +1,4 @@
 <template>
-
   <div v-if="loading" class="absolute top-1/2 left-1/2 translate-x-1/2">
     <Loading />
   </div>
@@ -212,8 +211,7 @@ function refreshReview() {
 watchEffect(() => {
   userState.value = store.state.user;
 });
-const { result, error, variables, loading, refetch } =
-  useQuery(detailRecipeQL);
+const { result, error, variables, loading, refetch } = useQuery(detailRecipeQL);
 variables.value = {
   rid: recipe_id,
 };
@@ -235,13 +233,24 @@ watchEffect(() => {
     refetch();
   }
   if (recipeDetail.value) {
-    recipeImages.value = recipeDetail.value?.images;
+    // recipeImages.value = recipeDetail.value?.images;
+    // if (recipeDetail.value?.cover_image) {
+    //   displayImages.value.push(recipeDetail.value?.cover_image);
+    // }
+    // if (recipeImages.value && recipeImages.value.length > 0) {
+    //   displayImages.value = [...recipeImages.value[0].image];
+    //   displayImages.value.push(recipeDetail.value?.cover_image);
+    // }
     if (recipeDetail.value?.cover_image) {
       displayImages.value.push(recipeDetail.value?.cover_image);
-    }
-    if (recipeImages.value && recipeImages.value.length > 0) {
-      displayImages.value = [...recipeImages.value[0].image];
-      displayImages.value.push(recipeDetail.value?.cover_image);
+      console.log("cover-image", recipeDetail.value?.cover_image);
+
+      const images = recipeDetail.value?.images[0]?.image ?? [];
+
+      images.forEach((img) => {
+        displayImages.value.push(img);
+        console.log("--->", img);
+      });
     }
     recipeIng.value = recipeDetail.value?.ingredients;
     if (recipeIng.value && recipeIng.value.length > 0) {
@@ -299,7 +308,7 @@ function handleBookmark() {
   if (userState.value) {
     ToggleBookmark()
       .then((result) => {
-        reviewUpdate()
+        reviewUpdate();
         isBookmarked.value = !isBookmarked.value;
       })
       .catch((error) => {
