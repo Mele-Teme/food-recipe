@@ -3,13 +3,7 @@
     <div class="relative flex w-1/2 justify-center items-center my-3 flex-col">
       <Rate :givenRate="probs.data.recipeRated" />
       <div class="text-slate-600 text-sm">
-        <b>{{ probs.data.title }} </b> rated
-        <b>{{
-          probs.data.recipeRated % 2 == 0
-            ? probs.data.recipeRated
-            : probs.data.recipeRated.toFixed(1)
-        }}</b>
-        star
+        <b>{{ probs.data.title }} </b> rated <b>{{ probs.data.recipeRated % 2 ==0 ? probs.data.recipeRated : probs.data.recipeRated?.toFixed(1) }}</b>  star
       </div>
     </div>
     <div class="relative flex w-1/2 justify-center items-center my-3 flex-col">
@@ -38,8 +32,7 @@
       </div>
       <button
         class="hover:border-b disabled:text-slate-300 hover:shadow-lg border-slate-700 text-sm"
-        @click="rateRecipe"
-        :disabled="!toggleButton"
+        @click="rateRecipe" :disabled="!toggleButton"
       >
         <span v-if="rateStatus"> change Rate </span>
         <span v-else>Rate Recipe</span>
@@ -69,7 +62,7 @@ function rateRecipe() {
         rateGiven.value++;
       }
     }
-
+  
     addRate({
       uid: store.state.user?.id ?? null,
       rid: route.query.id,
