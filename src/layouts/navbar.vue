@@ -5,7 +5,7 @@
     id="go_up"
     class="fixed bottom-3 right-5 w-fit h-fit cursor-pointer rounded-full scale-0 transition-all duration-500 bg-black text-white z-10 px-3 py-2"
   >
-    Back to top
+    Go Up
   </div>
   <div
     v-if="user"
