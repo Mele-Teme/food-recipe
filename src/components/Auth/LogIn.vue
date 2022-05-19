@@ -6,7 +6,7 @@
       <div>
         <img class="mx-auto h-40" src="/src/assets/logo.png" alt="Logo" />
         <h2
-          class="mt-5 text-center text-3xl font-bold text-lime-600 font-serif"
+          class="mt-5 text-center text-3xl font-bold text-orange-400 font-serif"
         >
           LogIn To Account
         </h2>
