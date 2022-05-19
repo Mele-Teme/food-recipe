@@ -1,7 +1,7 @@
 <template lang="">
   <div class="w-full h-full">
     <div
-      class="h-40 bg-[url('/src/assets/banner.jpg')] bg-no-repeat bg-cover bg-center"
+      class="h-40 bg-[url(https://i.ibb.co/B4X2cn9/banner.jpg)] bg-no-repeat bg-cover bg-center"
     >
       <div>
         <div

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative h-40 w-full bg-[url('/src/assets/banner.jpg')] bg-no-repeat bg-cover bg-center"
+    class="relative h-40 w-full bg-[url(https://i.ibb.co/B4X2cn9/banner.jpg)] bg-no-repeat bg-cover bg-center"
   ></div>
   <div
     class="flex overflow-hidden w-full py-3 justify-center items-center bg-gray-50"

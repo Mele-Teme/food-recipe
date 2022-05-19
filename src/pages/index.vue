@@ -1,8 +1,8 @@
 <template lang="">
   <div class="w-full h-full relative">
     <div
-      class="h-40 bg-[url('/src/assets/banner.jpg')] bg-no-repeat bg-cover bg-center"
-    >
+      class="h-40 bg-[url(https://i.ibb.co/B4X2cn9/banner.jpg)] bg-no-repeat bg-cover bg-center"
+      >
       <div
         class="shadow-2xl w-fit px-4 h-24 bg-white/80 m-auto relative -bottom-[114px] flex flex-col items-center justify-center"
       >
