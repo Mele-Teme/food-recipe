@@ -45,7 +45,7 @@
           class="sm:w-fit sm:px-4 lg:w-full border-b-4 border-transparent hover:text-orange-800 font-semibold sm:text-center sm:py-2 cursor-pointer transition-all duration-500 after:transition-all after:duration-700 after:invisible relative after:contents-[''] after:absolute after:border-2 after:border-slate-600 after:-bottom-1 after:-left-0 after:right-full lg:px-1"
           @click="handleClick($event, 'createrecipe')"
         >
-          Create Recipe
+          Add Recipe
         </li>
         <li
           class="sm:w-fit sm:px-4 lg:w-full border-b-4 border-transparent hover:text-orange-800 font-semibold sm:text-center sm:py-2 cursor-pointer transition-all duration-500 after:transition-all after:duration-700 after:invisible relative after:contents-[''] after:absolute after:border-2 after:border-slate-600 after:-bottom-1 after:-left-0 after:right-full lg:px-1"
