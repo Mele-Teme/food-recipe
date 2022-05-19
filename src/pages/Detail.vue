@@ -248,6 +248,7 @@ const displayImages = ref([]);
 const isLiked = ref(false);
 const isBookmarked = ref(false);
 const myRate = ref(0);
+displayImages.value?.cover_image
 watchEffect(() => {
   if (error.value?.message?.includes("Could not verify JWT")) {
     fetchMore({
@@ -256,6 +257,7 @@ watchEffect(() => {
       },
     });
   }
+});
   if (recipeDetail.value) {
     if (recipeDetail.value?.cover_image) {
       displayImages.value.push(recipeDetail.value?.cover_image);
@@ -275,7 +277,6 @@ watchEffect(() => {
       recipeStep.value = recipeStep.value[0].step;
     }
   }
-});
 
 const {
   result: reviewResult,
