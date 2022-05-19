@@ -15,13 +15,13 @@
       <h1
         class="z-20 text-2xl sm:w-full py-2 ml-2 lg:w-1/4 lg:my-0 flex items-center text-orange-600 font-bold font-serif"
       >
-        Food Recipe🍕
+        🍕Food Recipe
       </h1>
 
       <ul
         :class="{ show: showNav }"
         ref="classToggle"
-        class="nav bg-gray-100 z-0 mx-auto sm:flex lg:flex sm:flex-col lg:flex-row sm:items-center lg:items-end lg:w-3/4 sm:mb-2 lg:my-0 text-slate-700 w-full sm:-translate-y-[100vh] invisible lg:visible lg:translate-y-[0px] transition-all duration-500 shadow-2xl"
+        class="nav bg-gray-100 z-0 mx-auto sm:flex lg:flex sm:flex-col lg:flex-row sm:items-center lg:items-end lg:w-3/4 sm:mb-2 lg:my-0 text-slate-700 w-full sm:-translate-y-[100vh] lg:translate-y-[0px] transition-all duration-500 shadow-2xl"
       >
         <li
           class="sm:w-fit sm:px-4 lg:w-full border-b-4 border-transparent hover:text-orange-800 font-semibold sm:text-center sm:py-2 cursor-pointer after:transition-all after:duration-700 after:invisible relative after:contents-[''] after:absolute after:border-2 after:border-slate-600 after:-bottom-1 after:-left-0 after:right-full"
@@ -75,7 +75,7 @@
     <h1
         class="z-20 text-3xl sm:w-full py-2 ml-2 lg:my-0 flex items-center text-orange-600 font-bold font-serif"
       >
-        Food Recipe🍕
+        🍕Food Recipe
       </h1>
     <button
       class="mr-3 w-fit font-semibold border-2 border-black hover:bg-black hover:text-white py-1 px-4"
@@ -215,7 +215,7 @@ window.addEventListener("resize", (e) => {
 </script>
 <style>
 .show {
-  @apply sm:-translate-y-[3px] visible lg:translate-y-[0];
+  @apply sm:-translate-y-[3px] lg:translate-y-[0];
 }
 .burgerAnim {
   @apply bg-transparent after:top-[5px] after:-rotate-45 before:top-[5px] before:rotate-45;
