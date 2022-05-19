@@ -49,7 +49,7 @@
             </div>
           </div>
           <div class="w-full h-fit flex items-end justify-end text-sm">
-            <div class="w-fit flex justify-center items-center shadow-lg px-2">
+            <div class="w-fit flex justify-center items-center shadow-lg px-2 cursor-pointer">
               <svg
                 :class="{
                   'fill-slate-600': isBookmarked,
