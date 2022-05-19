@@ -160,8 +160,17 @@
     <CommentSection
       :data="commentLs"
       @compose="
-        commentRefresh();
-        reviewUpdate();
+        commentFetch({
+          variables: {
+            rid: recipe_id,
+          },
+        });
+        reviewFetch({
+          variables: {
+            rid: recipe_id,
+            uid: userState.value?.id ?? null,
+          },
+        });
       "
     />
   </div>
@@ -207,13 +216,23 @@ if (recipe_id == null) {
 const userState = ref(null);
 const currentImageIndex = ref(0);
 function refreshReview() {
-  reviewUpdate();
-  commentRefresh();
+  reviewFetch({
+    variables: {
+      rid: recipe_id,
+      uid: userState.value?.id ?? null,
+    },
+  });
+  commentFetch({
+    variables: {
+      rid: recipe_id,
+    },
+  });
 }
 watchEffect(() => {
   userState.value = store.state.user;
 });
-const { result, error, variables, loading, refetch } = useQuery(detailRecipeQL);
+const { result, error, variables, loading, fetchMore } =
+  useQuery(detailRecipeQL);
 variables.value = {
   rid: recipe_id,
 };
@@ -231,7 +250,11 @@ const isBookmarked = ref(false);
 const myRate = ref(0);
 watchEffect(() => {
   if (error.value?.message?.includes("Could not verify JWT")) {
-    refetch();
+    fetchMore({
+      variables: {
+        rid: recipe_id,
+      },
+    });
   }
   if (recipeDetail.value) {
     if (recipeDetail.value?.cover_image) {
@@ -256,7 +279,6 @@ watchEffect(() => {
 
 const {
   result: reviewResult,
-  refetch: reviewUpdate,
   variables: reviewVar,
   error: revError,
   fetchMore: reviewFetch,
@@ -269,7 +291,12 @@ reviewVar.value = {
 const revResult = computed(() => reviewResult.value?.recipes_by_pk ?? []);
 watchEffect(() => {
   if (revError.value?.message?.includes("Could not verify JWT")) {
-    reviewUpdate();
+    reviewFetch({
+      variables: {
+        rid: recipe_id,
+        uid: userState.value?.id ?? null,
+      },
+    });
   }
   if (revResult.value) {
     isBookmarked.value = revResult.value?.is_bookamrked ?? false;
@@ -300,7 +327,12 @@ function handleBookmark() {
   if (userState.value) {
     ToggleBookmark()
       .then((result) => {
-        reviewUpdate();
+        reviewFetch({
+          variables: {
+            rid: recipe_id,
+            uid: userState.value?.id ?? null,
+          },
+        });
         isBookmarked.value = !isBookmarked.value;
       })
       .catch((error) => {
@@ -326,7 +358,12 @@ function like() {
     ToggleLike()
       .then((result) => {
         isLiked.value = !isLiked.value;
-        reviewUpdate();
+        reviewFetch({
+          variables: {
+            rid: recipe_id,
+            uid: userState.value?.id ?? null,
+          },
+        });
       })
       .catch((error) => {
         console.log(error.message);
@@ -343,7 +380,6 @@ const {
   result: commentLst,
   error: commentError,
   variables: commentVariables,
-  refetch: commentRefresh,
   fetchMore: commentFetch,
 } = useQuery(commentListQl);
 
@@ -355,7 +391,11 @@ const commentLs = computed(() => commentLst.value?.get_review ?? []);
 
 watchEffect(() => {
   if (commentError.value?.message?.includes("Could not verify JWT")) {
-    commentRefresh();
+    commentFetch({
+      variables: {
+        rid: recipe_id,
+      },
+    });
   }
 });
 
