@@ -49,7 +49,9 @@
             </div>
           </div>
           <div class="w-full h-fit flex items-end justify-end text-sm">
-            <div class="w-fit flex justify-center items-center shadow-lg px-2 cursor-pointer">
+            <div
+              class="w-fit flex justify-center items-center shadow-lg px-2 cursor-pointer"
+            >
               <svg
                 :class="{
                   'fill-slate-600': isBookmarked,
@@ -232,7 +234,6 @@ watchEffect(() => {
     refetch();
   }
   if (recipeDetail.value) {
-
     if (recipeDetail.value?.cover_image) {
       displayImages.value.push(recipeDetail.value?.cover_image);
 
@@ -258,6 +259,7 @@ const {
   refetch: reviewUpdate,
   variables: reviewVar,
   error: revError,
+  fetchMore: reviewFetch,
 } = useQuery(reviewUpdateQl);
 reviewVar.value = {
   rid: recipe_id,
@@ -342,6 +344,7 @@ const {
   error: commentError,
   variables: commentVariables,
   refetch: commentRefresh,
+  fetchMore: commentFetch,
 } = useQuery(commentListQl);
 
 commentVariables.value = {
@@ -367,5 +370,18 @@ function prev() {
     currentImageIndex.value = currentImageIndex.value - 1;
   }
 }
+onMounted(() => {
+  commentFetch({
+    variables: {
+      rid: recipe_id,
+    },
+  });
+  reviewFetch({
+    variables: {
+      rid: recipe_id,
+      uid: userState.value?.id ?? null,
+    },
+  });
+});
 </script>
 <style></style>
