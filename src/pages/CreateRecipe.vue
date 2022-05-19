@@ -382,6 +382,7 @@ const submit = handleSubmit(
     })
       .then((result) => {
         resetForm();
+        multSrc.value = []
         formIngrediant.value = []
         formStep.value = []
         loading.value = false;
