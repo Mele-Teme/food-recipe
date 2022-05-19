@@ -416,6 +416,7 @@ onMounted(() => {
       rid: recipe_id,
     },
   });
+  
   reviewFetch({
     variables: {
       rid: recipe_id,

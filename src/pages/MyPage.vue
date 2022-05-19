@@ -96,7 +96,7 @@ function handleClick(id) {
   router.push("/detail?id="+id);
 }
 
-const { result, error, variables, refetch ,loading,fetchMore} = useQuery(myRecip);
+const { result, error, variables ,loading,fetchMore} = useQuery(myRecip);
 variables.value = {
   uid: store.state.user?.id ?? null,
 };
@@ -109,7 +109,11 @@ onMounted(()=>{
 })
 watchEffect(() => {
   if (error.value?.message?.includes("Could not verify JWT")) {
-    refetch();
+    fetchMore({
+      variables:{
+  uid: store.state.user?.id ?? null,
+}
+    });
   }
 });
 const recipe = computed(() => result.value?.my_recipe ?? []);
@@ -119,7 +123,11 @@ function deleteRecipe(id) {
     rid: id,
   })
     .then((result) => {
-      refetch();
+        fetchMore({
+      variables:{
+  uid: store.state.user?.id ?? null,
+}
+    });
     })
     .catch((error) => {
       console.log(error);

@@ -99,21 +99,27 @@ const filter = ref("");
 const searchKey = ref("");
 const categoryValue = ref("all");
 
-const { result, error, variables, loading, refetch ,fetchMore } = useQuery(recipeQuery);
-onMounted(()=>{
+const { result, error, loading, fetchMore } = useQuery(recipeQuery);
+onMounted(() => {
   fetchMore({
-    variables : {
-    cat: categoryValue.value,
-    filter: filter.value== "" ? "title":filter.value,
-    search: "" + searchKey.value,
-  }
-  })
-})
+    variables: {
+      cat: categoryValue.value,
+      filter: filter.value == "" ? "title" : filter.value,
+      search: "" + searchKey.value,
+    },
+  });
+});
 const recipe = computed(() => result.value?.search_recipes ?? []);
 
 watchEffect(() => {
   if (error.value?.message?.includes("Could not verify JWT")) {
-    refetch();
+    fetchMore({
+      variables: {
+        cat: _catagory,
+        filter: _filter == "" ? "title" : _filter,
+        search: "" + _search,
+      },
+    });
   }
   setVariable(categoryValue.value, filter.value, "" + searchKey.value);
 });
@@ -122,15 +128,17 @@ function changeCat(value) {
 }
 
 function setVariable(_catagory, _filter, _search) {
-  variables.value = {
-    cat: _catagory,
-    filter: _filter == "" ? "title" : _filter,
-    search: "" + _search,
-  };
+  fetchMore({
+    variables: {
+      cat: _catagory,
+      filter: _filter == "" ? "title" : _filter,
+      search: "" + _search,
+    },
+  });
 }
 
 function handleClick(id) {
-  router.push("detail?id="+id);
+  router.push("detail?id=" + id);
 }
 </script>
 <style>

@@ -93,12 +93,16 @@ function removeBookmark(id) {
     rid: id,
   })
     .then((result) => {
-      refetch();
+     fetchMore({
+       variables:{
+  uid: store.state.user?.id ?? null,
+}
+     })
     })
     .catch((error) => console.log(error));
 }
 
-const { result, error, variables, refetch, fetchMore, loading } =
+const { result, error, variables, fetchMore, loading } =
   useQuery(bookmarkQl);
 variables.value = {
   uid: store.state.user?.id ?? null,
@@ -114,7 +118,11 @@ const recipe = computed(() => result.value?.getbookmark ?? []);
 watchEffect(() => {
   bookmarkCount.value = recipe.value?.length ?? 0;
   if (error.value?.message?.includes("Could not verify JWT")) {
-    refetch();
+        fetchMore({
+       variables:{
+  uid: store.state.user?.id ?? null,
+}
+     })
   }
 });
 </script>
