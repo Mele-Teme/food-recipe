@@ -6,7 +6,7 @@
     class="flex overflow-hidden w-full py-3 justify-center items-center bg-gray-50"
   >
     <div class="w-[95%] rounded-xl">
-      <h1 class="text-center text-4xl text-slate-600 font-semibold mb-2">
+      <h1 class="text-center text-4xl text-orange-600 font-semibold mb-2">
         Create Recipe
       </h1>
       <form
