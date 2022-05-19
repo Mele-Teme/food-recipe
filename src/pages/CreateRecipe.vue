@@ -7,7 +7,7 @@
   >
     <div class="w-[95%] rounded-xl">
       <h1 class="text-center text-4xl text-orange-600 font-semibold mb-2">
-        Create Recipe
+        Add Recipe
       </h1>
       <form
         @submit.prevent="submit"
