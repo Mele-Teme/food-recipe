@@ -22,7 +22,7 @@
 
     <div
       v-if="recipe.length == 0 && !loading"
-      class="w-full h-full flex justify-center items-center flex-col mt-14"
+      class="w-full h-full flex justify-center items-center flex-col mt-36"
     >
     
       <h2 class="font-semibold text-xl text-slate-700">
