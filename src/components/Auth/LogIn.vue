@@ -1,10 +1,10 @@
 <template>
   <div
-    class="max-w-md w-full mx-10 space-y-8 bg-black/20  border-4 border-black/50 p-3"
+    class="max-w-md w-full mx-10 space-y-8 bg-black/20"
   >
     <div class="p-5 rounded-2xl">
       <div>
-        <img class="mx-auto h-40" src="/src/assets/logo.png" alt="Workflow" />
+        <img class="mx-auto h-40" src="/src/assets/logo.png" alt="Logo" />
         <h2
           class="mt-5 text-center text-3xl font-bold text-lime-800 font-serif"
         >
