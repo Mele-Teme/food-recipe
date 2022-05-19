@@ -3,7 +3,7 @@
     <div class="relative flex w-1/2 justify-center items-center my-3 flex-col">
       <Rate :givenRate="probs.data.recipeRated" />
       <div class="text-slate-600 text-sm">
-        <b>{{ probs.data.title }} </b> rated <b>{{ probs.data.recipeRated % 2 ==0 ? probs.data.recipeRated : probs.data.recipeRated?.toFixed(1) }}</b>  star
+        <b>{{ probs.data.title }} </b> rated <b>{{ Number.isInteger(probs.data.recipeRated)? probs.data.recipeRated : probs.data.recipeRated.toFixed(1) }}</b>  star
       </div>
     </div>
     <div class="relative flex w-1/2 justify-center items-center my-3 flex-col">

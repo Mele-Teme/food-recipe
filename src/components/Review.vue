@@ -2,7 +2,7 @@
   <div class="w-full h-fit flex justify-evenly items-center">
     <div class="flex justify-center items-center space-x-1">
       <span class="text-gray-500"
-        >{{ probs.rate % 2 == 0 ? probs.rate : probs.rate.toFixed(1) }}
+        >{{Number.isInteger(probs.rate)?probs.rate:probs.rate.toFixed(1)}}
       </span>
       <img src="/src/assets/fav.png" alt="" class="w-5 h-5" />
     </div>
