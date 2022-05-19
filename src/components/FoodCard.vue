@@ -20,7 +20,7 @@
     </p>
     <p class="text-center text-sm  px-1 h-[55px] text-slate-600">
       {{
-        probs.item.description.substring(0,70)
+        probs.item.description.substring(0,60)
       }}
     </p>
     <Review
