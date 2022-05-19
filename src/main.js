@@ -1,4 +1,4 @@
-import { createApp, provide, h ,watchEffect} from "vue";
+import { createApp, provide, h } from "vue";
 import App from "./App.vue";
 import store from "./store/store";
 import "./index.css";
