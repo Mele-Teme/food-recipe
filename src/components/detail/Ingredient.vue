@@ -1,6 +1,6 @@
 <template>
   <div
-    class="mx-3 rounded-2xl shadow-lg  shadow-gray-300 xl:h-fit py-2 xl:mt-10"
+    class="mx-3 rounded-2xl shadow-md  shadow-gray-300 xl:h-fit py-2 xl:mt-10"
   >
         <h2
           class="w-fit mb-2 text-center font-bold text-xl text-slate-700 p-1 px-2 rounded-lg"
