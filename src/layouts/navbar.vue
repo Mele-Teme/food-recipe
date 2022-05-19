@@ -5,7 +5,6 @@
     id="go_up"
     class="fixed bottom-3 right-5 w-fit h-fit cursor-pointer rounded-full scale-0 transition-all duration-500 bg-black text-white z-10 px-3 py-2"
   >
-  
     Back to top
   </div>
   <div
@@ -14,9 +13,9 @@
   >
     <div class="h-[50px] flex sm:flex-col lg:flex-row w-full">
       <h1
-        class="z-20 text-3xl sm:w-full py-2 ml-2 lg:w-1/4 lg:my-0 flex items-center text-slate-700 font-bold"
+        class="z-20 text-3xl sm:w-full py-2 ml-2 lg:w-1/4 lg:my-0 flex items-center text-orange-600 font-bold font-serif"
       >
-        Food Recipe
+        Food Recipe🍕
       </h1>
 
       <ul
@@ -100,11 +99,9 @@ const burgerAnim = ref(false);
 const user = computed(() => store.state.user);
 
 async function logout() {
-  
   showNav.value = false;
   burgerAnim.value = false;
-if(route.path != '/')
-  router.push("/");
+  if (route.path != "/") router.push("/");
   axios
     .get("/logout", { withCredentials: true })
     .then((result) => {
@@ -116,7 +113,6 @@ if(route.path != '/')
   store.dispatch("SET_USER", { user: null });
 }
 function login() {
-  
   router.push("/login");
 }
 const GOTOP = ref("");
@@ -200,7 +196,7 @@ onMounted(() => {
 function handleClick(e, route) {
   if (window.innerWidth < 750) showNav.value = false;
   burgerAnim.value = false;
-  
+
   router.push(route);
 }
 

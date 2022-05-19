@@ -32,7 +32,7 @@
       </div>
       <button
         class="hover:border-b disabled:text-slate-300 hover:shadow-lg border-slate-700 text-sm"
-        @click="rateRecipe" :disabled="toggleButton"
+        @click="rateRecipe" :disabled="!toggleButton"
       >
         <span v-if="rateStatus"> change Rate </span>
         <span v-else>Rate Recipe</span>
