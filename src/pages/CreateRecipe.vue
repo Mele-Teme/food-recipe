@@ -85,7 +85,6 @@
                 type="file"
                 accept="image/*"
                 name="image"
-                value="imageValue"
                 @change="multChange($event)"
                 class="bg-white w-full border rounded-lg hover:scale-[1.015] hover:bg-white appearance-none text-gray-700 outline-none placeholder-gray-500 file:border-none file:h-full file:py-3 file:text-black file:p-2 pr-3 font-mono text-sm"
                 multiple
