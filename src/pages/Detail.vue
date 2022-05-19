@@ -16,7 +16,7 @@
             <img
               :src="displayImages[currentImageIndex]"
               alt=""
-              class="w-full h-80 object-cover object-center"
+              class="w-full h-80 object-cover object-centerz"
             />
             <div
               v-if="displayImages.length > 1"
@@ -85,7 +85,7 @@
           <p class="text-slate-800 shadow-sm w-fit px-3 font-semibold">
             &copy; Recipe by {{ recipeDetail.recipe_owner }}
           </p>
-          <p class="text-slate-800 indent-3 text-sm">
+          <p class="text-slate-800 indent-3 text-sm pr-2">
             {{ recipeDetail.description }}
           </p>
           <RateRecipe
@@ -150,7 +150,7 @@
                   recipeStep.indexOf(item) + 1
                 }}</span>
               </h1>
-              <h1 class="mb-2">{{ item }}</h1>
+              <h1 class="mb-2 pr-2">{{ item }}</h1>
             </div>
           </div>
         </div>
