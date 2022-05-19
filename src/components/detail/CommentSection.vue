@@ -53,7 +53,7 @@ import { ref, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { useMutation } from "@vue/apollo-composable";
 import { useStore } from "vuex";
-import { addComment } from "../data/qlOperations/mutation";
+import { addComment } from "../../data/qlOperations/mutation";
 const route = useRoute();
 const recipe_id = route.query.id;
 const router = useRouter();

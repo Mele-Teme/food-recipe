@@ -71,7 +71,7 @@
 import { useField, useForm } from "vee-validate";
 import { useRouter } from "vue-router";
 import { useStore } from "vuex";
-import axios from "../axios/axiosConfig";
+import axios from "../../axios/axiosConfig";
 import { watch } from "@vue/runtime-core";
 import { ref } from "vue";
 const logInError = ref("");

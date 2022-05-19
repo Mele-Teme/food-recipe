@@ -79,7 +79,7 @@
 </template>
 <script setup>
 import { useField, useForm } from "vee-validate";
-import axios from "../axios/axiosConfig";
+import axios from "../../axios/axiosConfig";
 import { ref, watch } from "vue";
 import { useStore } from "vuex";
 import { useRouter } from "vue-router";

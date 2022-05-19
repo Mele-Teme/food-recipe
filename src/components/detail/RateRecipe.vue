@@ -44,7 +44,7 @@
 import { ref, watchEffect } from "vue";
 import { useMutation } from "@vue/apollo-composable";
 import { useStore } from "vuex";
-import { rateRecipeQl } from "../data/qlOperations/mutation";
+import { rateRecipeQl } from "../../data/qlOperations/mutation";
 import { useRoute, useRouter } from "vue-router";
 const router = useRouter();
 const route = useRoute();
