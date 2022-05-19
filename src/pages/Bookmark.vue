@@ -72,7 +72,7 @@ meta:
 <script setup>
 import { useRouter } from "vue-router";
 import { useMutation, useQuery } from "@vue/apollo-composable";
-import { computed, watchEffect } from "vue";
+import { computed, watchEffect,onMounted } from "vue";
 import { useStore } from "vuex";
 import { ref } from "vue";
 import { bookmarkToggleQL } from "../data/qlOperations/mutation";

@@ -78,7 +78,7 @@ meta:
   layout: navbar
 </route>
 <script setup>
-import { computed, onMounted, ref, watch, watchEffect } from "vue";
+import { computed, onMounted, ref, watchEffect } from "vue";
 import { useRouter } from "vue-router";
 import { useStore } from "vuex";
 import { useMutation, useQuery } from "@vue/apollo-composable";
