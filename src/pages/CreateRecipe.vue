@@ -214,7 +214,7 @@
         </div>
         <div v-if="loading" class="space-x-4 flex justify-center items-center">
           <Loading />
-          <span class="font-mono">Working on your request</span>
+          <span class="font-mono">Creating your Recipe,Please Wait ... </span>
         </div>
         <div v-if="createResult" class="flex justify-center items-center">
           <span class="mb-2 font-semibold">{{ createResult }}</span>
