@@ -3,14 +3,13 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from "vue";
+import { onMounted } from "vue";
 import { useRouter, useRoute } from "vue-router";
 import { useStore } from "vuex";
 import axios from "./axios/axiosConfig";
 
 const store = useStore();
 const useroute = useRoute();
-const interval = ref(null);
 const router = useRouter();
 
 onMounted(() => {
