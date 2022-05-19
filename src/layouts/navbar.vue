@@ -73,10 +73,10 @@
     class="z-20 fixed min-h-[50px] w-screen flex items-center bg-gray-100 opacity-95"
   >
     <h1
-      class="z-20 text-3xl sm:w-full py-2 ml-2 lg:w-full lg:my-0 flex items-center text-slate-900 font-bold"
-    >
-      Food Recipe
-    </h1>
+        class="z-20 text-3xl sm:w-full py-2 ml-2 lg:w-1/4 lg:my-0 flex items-center text-orange-600 font-bold font-serif"
+      >
+        Food Recipe🍕
+      </h1>
     <button
       class="mr-2 w-fit font-semibold border-2 border-black hover:bg-black hover:text-white py-1 px-4"
       @click="login"
