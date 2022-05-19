@@ -9,7 +9,7 @@
         Welcome
       </h2>
       <h2
-        class="mt-2 text-center text-3xl font-bold text-lime-700 font-serif mb-3"
+        class="mt-2 text-center text-3xl font-bold text-lime-600 font-serif mb-3"
       >
         Create New Account
       </h2>
