@@ -7,7 +7,7 @@
         <div
           class="group shadow-md min-w-min max-w-max px-8 h-24 bg-white/90 m-auto relative -bottom-[105px] flex flex-col items-center justify-center"
         >
-          <p class="font-bold text-2xl mb-2 pt-2 text-orange-600 font-serif">
+          <p class="font-bold text-2xl mb-2 pt-2 text-orange-700 font-serif">
             Your Book Marks
           </p>
 
