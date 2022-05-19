@@ -16,7 +16,7 @@
             <img
               :src="displayImages[currentImageIndex]"
               alt=""
-              class="w-full h-80  object-center object-contain"
+              class="w-full h-80 object-cover object-center"
             />
             <div
               v-if="displayImages.length > 1"
