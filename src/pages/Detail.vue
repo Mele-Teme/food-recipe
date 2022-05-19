@@ -301,8 +301,8 @@ watchEffect(() => {
   }
   if (revResult.value) {
     isBookmarked.value = revResult.value?.is_bookamrked ?? false;
-    recipeRated.value = revResult.value?.recipe_rate_count;
-    recipeLikes.value = revResult.value?.recipe_like_count;
+    recipeRated.value = revResult.value?.recipe_rate_count??0;
+    recipeLikes.value = revResult.value?.recipe_like_count??0;
     recipecomment_count.value = revResult.value?.recipe_comment_count;
     recipeMyReview.value = revResult.value?.get_my_review;
     if (recipeMyReview.value && recipeMyReview.value.length > 0) {
