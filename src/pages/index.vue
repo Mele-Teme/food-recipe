@@ -58,8 +58,8 @@
           srcset=""
           class="w-52 h-52"
         />
-        <h2 class="font-semibold text-xl">We couldn't found any matches</h2>
-        <p>please try another recipe</p>
+        <h2 class="font-semibold text-xl">We couldn't found any Recipe</h2>
+        <p>try another Recipe</p>
       </div>
       <div v-if="loading" class="mt-16">
         <Loading />
