@@ -5,7 +5,7 @@
         <h2
           class="w-fit mb-2 text-center font-bold text-xl text-slate-700 p-1 px-2 rounded-lg"
         >
-          Ingrediants <span class="text-slate-500">One Serving</span>
+          Ingrediants :
         </h2>
       <div class="w-full flex sm:flex-col text-slate-800">
         <div
