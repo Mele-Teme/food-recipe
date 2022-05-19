@@ -24,31 +24,31 @@
         class="nav bg-gray-100 z-0 mx-auto sm:flex lg:flex sm:flex-col lg:flex-row sm:items-center lg:items-end lg:w-3/4 sm:mb-2 lg:my-0 text-slate-700 w-full sm:-translate-y-[100vh] lg:translate-y-[0px] transition-all duration-500 shadow-2xl"
       >
         <li
-          class="sm:w-fit sm:px-4 lg:w-full border-b-4 border-transparent hover:text-orange-800 font-semibold sm:text-center sm:py-2 cursor-pointer after:transition-all after:duration-700 after:invisible relative after:contents-[''] after:absolute after:border-2 after:border-slate-600 after:-bottom-1 after:-left-0 after:right-full"
+          class="sm:w-fit sm:px-4 lg:w-full border-b-4 border-transparent hover:text-orange-800 font-semibold sm:text-center sm:py-2 cursor-pointer after:transition-all after:duration-700 after:invisible relative after:contents-[''] after:absolute after:border-2 after:border-orange-500 after:-bottom-1 after:-left-0 after:right-full"
           @click="handleClick($event, '/')"
         >
           Home
         </li>
         <li
-          class="sm:w-fit sm:px-4 lg:w-full border-b-4 border-transparent hover:text-orange-800 font-semibold sm:text-center sm:py-2 cursor-pointer transition-all duration-500 after:transition-all after:duration-700 after:invisible relative after:contents-[''] after:absolute after:border-2 after:border-slate-600 after:-bottom-1 after:-left-0 after:right-full lg:px-1"
+          class="sm:w-fit sm:px-4 lg:w-full border-b-4 border-transparent hover:text-orange-800 font-semibold sm:text-center sm:py-2 cursor-pointer transition-all duration-500 after:transition-all after:duration-700 after:invisible relative after:contents-[''] after:absolute after:border-2 after:border-orange-500 after:-bottom-1 after:-left-0 after:right-full lg:px-1"
           @click="handleClick($event, 'bookmark')"
         >
           Book Mark
         </li>
         <li
-          class="sm:w-fit sm:px-4 lg:w-full border-b-4 border-transparent hover:text-orange-800 font-semibold sm:text-center sm:py-2 cursor-pointer transition-all duration-500 after:transition-all after:duration-700 after:invisible relative after:contents-[''] after:absolute after:border-2 after:border-slate-600 after:-bottom-1 after:-left-0 after:right-full lg:px-1"
+          class="sm:w-fit sm:px-4 lg:w-full border-b-4 border-transparent hover:text-orange-800 font-semibold sm:text-center sm:py-2 cursor-pointer transition-all duration-500 after:transition-all after:duration-700 after:invisible relative after:contents-[''] after:absolute after:border-2 after:border-orange-500 after:-bottom-1 after:-left-0 after:right-full lg:px-1"
           @click="handleClick($event, 'mypage')"
         >
           My Recipes
         </li>
         <li
-          class="sm:w-fit sm:px-4 lg:w-full border-b-4 border-transparent hover:text-orange-800 font-semibold sm:text-center sm:py-2 cursor-pointer transition-all duration-500 after:transition-all after:duration-700 after:invisible relative after:contents-[''] after:absolute after:border-2 after:border-slate-600 after:-bottom-1 after:-left-0 after:right-full lg:px-1"
+          class="sm:w-fit sm:px-4 lg:w-full border-b-4 border-transparent hover:text-orange-800 font-semibold sm:text-center sm:py-2 cursor-pointer transition-all duration-500 after:transition-all after:duration-700 after:invisible relative after:contents-[''] after:absolute after:border-2 after:border-orange-500 after:-bottom-1 after:-left-0 after:right-full lg:px-1"
           @click="handleClick($event, 'createrecipe')"
         >
           Add Recipe
         </li>
         <li
-          class="sm:w-fit sm:px-4 lg:w-full border-b-4 border-transparent hover:text-orange-800 font-semibold sm:text-center sm:py-2 cursor-pointer transition-all duration-500 after:transition-all after:duration-700 after:invisible relative after:contents-[''] after:absolute after:border-2 after:border-slate-600 after:-bottom-1 after:-left-0 after:right-full lg:px-1"
+          class="sm:w-fit sm:px-4 lg:w-full border-b-4 border-transparent hover:text-orange-800 font-semibold sm:text-center sm:py-2 cursor-pointer transition-all duration-500 after:transition-all after:duration-700 after:invisible relative after:contents-[''] after:absolute after:border-2 after:border-orange-500 after:-bottom-1 after:-left-0 after:right-full lg:px-1"
           @click="logout"
         >
           Log out
