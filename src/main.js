@@ -26,11 +26,12 @@ const authLink = setContext((_, { headers }) => {
   };
 });
 import Refresh from "./refresh";
+const cache = new InMemoryCache();
 const refresh = Refresh();
 refresh().then((res) => {
   const apolloClient = new ApolloClient({
     link: authLink.concat(httpLink),
-    cache:new InMemoryCache(),
+    cache,
     connectToDevTools: true,
   });
   store.dispatch("SET_USER", res);
