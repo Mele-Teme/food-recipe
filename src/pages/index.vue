@@ -6,7 +6,7 @@
       <div
         class="shadow-2xl w-fit px-4 h-24 bg-white/80 m-auto relative -bottom-[114px] flex flex-col items-center justify-center"
       >
-        <p class="font-bold text-2xl mb-2 pt-2 font-serif text-slate-800">
+        <p class="font-bold text-2xl mb-2 pt-2 font-serif text-orange-600">
           What would you like to cook ?
         </p>
 
