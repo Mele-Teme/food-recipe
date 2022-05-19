@@ -1,6 +1,6 @@
 <template>
   <div
-    class="max-w-md w-full mx-10 space-y-8 bg-black/20"
+    class="max-w-md w-full mx-10 space-y-8 bg-black/20 rounded-md"
   >
     <div class="p-5 rounded-2xl">
       <div>
