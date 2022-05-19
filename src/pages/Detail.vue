@@ -257,17 +257,8 @@ watchEffect(() => {
       },
     });
   }
-});
   if (recipeDetail.value) {
-    if (recipeDetail.value?.cover_image) {
-      displayImages.value.push(recipeDetail.value?.cover_image);
 
-      const images = recipeDetail.value?.images[0]?.image ?? [];
-
-      images.forEach((img) => {
-        displayImages.value.push(img);
-      });
-    }
     recipeIng.value = recipeDetail.value?.ingredients;
     if (recipeIng.value && recipeIng.value.length > 0) {
       recipeIng.value = recipeIng.value[0].ingredient;
@@ -277,6 +268,16 @@ watchEffect(() => {
       recipeStep.value = recipeStep.value[0].step;
     }
   }
+      if (recipeDetail.value?.cover_image) {
+      displayImages.value.push(recipeDetail.value?.cover_image);
+
+      const images = recipeDetail.value?.images[0]?.image ?? [];
+
+      images.forEach((img) => {
+        displayImages.value.push(img);
+      });
+    }
+});
 
 const {
   result: reviewResult,
