@@ -220,7 +220,6 @@ const recipeDetail = computed(() => result.value?.recipe_detail[0] ?? []);
 const recipeRated = ref(0);
 const recipeLikes = ref(0);
 const recipecomment_count = ref(0);
-const recipeImages = ref([]);
 const recipeMyReview = ref([]);
 const recipeIng = ref([]);
 const recipeStep = ref([]);
@@ -233,23 +232,14 @@ watchEffect(() => {
     refetch();
   }
   if (recipeDetail.value) {
-    // recipeImages.value = recipeDetail.value?.images;
-    // if (recipeDetail.value?.cover_image) {
-    //   displayImages.value.push(recipeDetail.value?.cover_image);
-    // }
-    // if (recipeImages.value && recipeImages.value.length > 0) {
-    //   displayImages.value = [...recipeImages.value[0].image];
-    //   displayImages.value.push(recipeDetail.value?.cover_image);
-    // }
+
     if (recipeDetail.value?.cover_image) {
       displayImages.value.push(recipeDetail.value?.cover_image);
-      console.log("cover-image", recipeDetail.value?.cover_image);
 
       const images = recipeDetail.value?.images[0]?.image ?? [];
 
       images.forEach((img) => {
         displayImages.value.push(img);
-        console.log("--->", img);
       });
     }
     recipeIng.value = recipeDetail.value?.ingredients;

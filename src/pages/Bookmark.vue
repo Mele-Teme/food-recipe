@@ -21,7 +21,7 @@
     </div>
 
     <div
-      v-if="recipe.length == 0"
+      v-if="recipe.length == 0 && !loading"
       class="w-full h-full flex justify-center items-center flex-col mt-14"
     >
       <img
@@ -81,29 +81,35 @@ const router = useRouter();
 const store = useStore();
 const bookmarkCount = ref(0);
 function handleClick(id) {
-  router.push("/detail?id="+id);
+  router.push("/detail?id=" + id);
 }
 function home() {
   router.replace("/");
 }
-  const { mutate: remBookmark } = useMutation(bookmarkToggleQL);
+const { mutate: remBookmark } = useMutation(bookmarkToggleQL);
 function removeBookmark(id) {
-
   remBookmark({
-      uid: store.state.user?.id ?? null,
-      rid: id,
-    })
+    uid: store.state.user?.id ?? null,
+    rid: id,
+  })
     .then((result) => {
       refetch();
     })
     .catch((error) => console.log(error));
 }
 
-const { result, error, variables, refetch } = useQuery(bookmarkQl);
-
+const { result, error, variables, refetch, fetchMore, loading } =
+  useQuery(bookmarkQl);
 variables.value = {
   uid: store.state.user?.id ?? null,
 };
+onMounted(() => {
+  fetchMore({
+    variables: {
+      uid: store.state.user?.id ?? null,
+    },
+  });
+});
 const recipe = computed(() => result.value?.getbookmark ?? []);
 watchEffect(() => {
   bookmarkCount.value = recipe.value?.length ?? 0;
@@ -111,6 +117,5 @@ watchEffect(() => {
     refetch();
   }
 });
-
 </script>
 <style lang=""></style>

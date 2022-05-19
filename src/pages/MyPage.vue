@@ -27,7 +27,7 @@
         My Recipe
       </h1>
       <div
-        v-if="recipe.length == 0"
+        v-if="recipe.length == 0 && !loading"
         class="w-full h-full flex justify-center items-center flex-col"
       >
         <img
@@ -78,7 +78,7 @@ meta:
   layout: navbar
 </route>
 <script setup>
-import { computed, ref, watch, watchEffect } from "vue";
+import { computed, onMounted, ref, watch, watchEffect } from "vue";
 import { useRouter } from "vue-router";
 import { useStore } from "vuex";
 import { useMutation, useQuery } from "@vue/apollo-composable";
@@ -96,10 +96,17 @@ function handleClick(id) {
   router.push("/detail?id="+id);
 }
 
-const { result, error, variables, refetch } = useQuery(myRecip);
+const { result, error, variables, refetch ,loading,fetchMore} = useQuery(myRecip);
 variables.value = {
   uid: store.state.user?.id ?? null,
 };
+onMounted(()=>{
+  fetchMore({
+    variables:{
+       uid: store.state.user?.id ?? null
+    }
+  })
+})
 watchEffect(() => {
   if (error.value?.message?.includes("Could not verify JWT")) {
     refetch();
