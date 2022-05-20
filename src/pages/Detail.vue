@@ -12,8 +12,10 @@
         class="mt-[50px] sm:flex-col lg:space-x-3 flex md:flex-col mx-3 xl:w-1/2 rounded-lg shadow-lg pb-2 h-fit"
       >
         <div class="w-full h-fit">
-          <div v-for="(image,index) in displayImages" :key="image" class="relative full xl:mt-2" :class="{'hidden':index!=currentImageIndex}">
+          <div class="relative full xl:mt-2" >
             <img
+              v-for="(image,index) in displayImages" :key="image"
+              :class="{'hidden':index!=currentImageIndex}"
               :src="displayImages[currentImageIndex]"
               alt=""
               class="w-full h-80 object-cover object-centerz"
