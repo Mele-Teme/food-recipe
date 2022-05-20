@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="max-w-md w-full mx-10 s bg-black/20  px-6 py-2 rounded-md"
-  >
+  <div class="max-w-md w-full mx-10 s bg-black/20 px-6 py-2 rounded-md">
     <div>
       <h2
         class="mt-2 text-center text-3xl font-bold font-serif text-lime-700 underline mb-3"
@@ -157,7 +155,7 @@ const submit = handleSubmit(
         }
       }
     } catch (err) {
-      console.log(err.message);
+      signUpError.value = "connection error";
     }
     loading.value = false;
   },

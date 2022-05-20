@@ -130,12 +130,11 @@ const submit = handleSubmit(
         logInError.value = response.data.error;
       }
     } catch (err) {
-      console.log("logIn error", err);
+      logInError.value = "something went wrong";
     }
     loading.value = false;
   },
   async (error) => {
-    console.log("log_error", error);
   }
 );
 </script>
