@@ -15,7 +15,7 @@
     </span>
   </div>
   <div class="w-full flex justify-center flex-col items-center relative">
-    <p class="font-bold text-slate-700 w-full truncate group-hover:text-black font-serif">
+    <p class="font-bold text-slate-700 w-full truncate group-hover:text-black font-serif text-center">
       {{ probs.item.title }}
     </p>
     <p class="text-center text-sm px-1 h-[55px] text-slate-600">
