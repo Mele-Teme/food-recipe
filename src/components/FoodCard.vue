@@ -3,7 +3,7 @@
     <img
       :src="probs.item.cover_image"
       alt=""
-      class="w-full h-36 object-cover rounded-t-lg"
+      class="w-full h-36 object-cover object-center rounded-t-lg"
     />
     <span
       class="absolute bottom-0 w-full h-8 bg-white/70 justify-end items-center flex"
