@@ -1,5 +1,5 @@
 <template>
-  <div class="relative w-full ">
+  <div class="relative w-full">
     <img
       :src="probs.item.cover_image"
       alt=""
@@ -15,18 +15,16 @@
     </span>
   </div>
   <div class="w-full flex justify-center flex-col items-center relative">
-    <p class="font-bold text-slate-700 group-hover:text-black font-serif">
+    <p class="font-bold text-slate-700 w-full truncate group-hover:text-black font-serif">
       {{ probs.item.title }}
     </p>
-    <p class="text-center text-sm  px-1 h-[55px] text-slate-600">
-      {{
-        probs.item.description.substring(0,60)
-      }}
+    <p class="text-center text-sm px-1 h-[55px] text-slate-600">
+      {{ probs.item.description.substring(0, 60) }}
     </p>
     <Review
       :like="probs.item.recipe_like_count"
       :comment="probs.item.recipe_comment_count"
-      :rate="item.recipe_rate_count??0"
+      :rate="item.recipe_rate_count ?? 0"
     />
   </div>
 </template>
