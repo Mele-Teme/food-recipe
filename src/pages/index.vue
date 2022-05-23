@@ -115,19 +115,16 @@ watchEffect(() => {
   if (error.value?.message?.includes("Could not verify JWT")) {
     refetch();
   }
-  setVariable(categoryValue.value, filter.value, "" + searchKey.value);
+  variables.value = {
+    cat: categoryValue.value,
+    filter: filter.value == "" ? "title" :filter.value,
+    search: "" + searchKey.value,
+  };
 });
 function changeCat(value) {
   categoryValue.value = value;
 }
 
-function setVariable(_catagory, _filter, _search) {
-  variables.value = {
-    cat: _catagory,
-    filter: _filter == "" ? "title" : _filter,
-    search: "" + _search,
-  };
-}
 
 function handleClick(id) {
   router.push("detail?id="+id);
