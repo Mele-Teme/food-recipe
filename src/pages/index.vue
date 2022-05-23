@@ -125,7 +125,6 @@ function changeCat(value) {
   categoryValue.value = value;
 }
 
-
 function handleClick(id) {
   router.push("detail?id="+id);
 }
