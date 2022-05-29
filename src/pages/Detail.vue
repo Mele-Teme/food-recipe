@@ -5,7 +5,7 @@
 
   <div
     v-else-if="recipeDetail.title"
-    class="w-full h-full overflow-x-hidden relative xl:space-x-2 sm:space-y-2"
+    class="w-full h-full  relative xl:space-x-2 sm:space-y-2"
   >
     <div class="w-full flex flex-col xl:flex-row">
       <div
