@@ -148,7 +148,7 @@
                 class="font-extrabold text-orange-700 text-5xl mx-5 flex items-baseline"
               >
                 S
-                <span class="text-2xl text-orange-500">{{
+                <span class="text-2xl text-orange-500 break-all">{{
                   recipeStep.indexOf(item) + 1
                 }}</span>
               </h1>
