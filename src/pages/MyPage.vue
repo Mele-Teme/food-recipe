@@ -92,7 +92,7 @@ function handleClick(id) {
 
 const { result, error, variables ,loading,fetchMore} = useQuery(myRecip);
 variables.value = {
-  uid: store.state.user?.id ?? null,
+  uid: 'e55ba3a7-d62d-4325-be0c-dd49edcc56c5',
 };
 onMounted(()=>{
   fetchMore({
