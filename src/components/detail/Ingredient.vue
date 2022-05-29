@@ -18,7 +18,7 @@
 
          </div>
           
-            <p class="ml-1  break-all">
+            <p class="ml-1 w-[90%] break-all">
               {{ item}}
             </p>
         </div>
