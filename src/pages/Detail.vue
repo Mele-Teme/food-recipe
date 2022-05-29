@@ -87,7 +87,7 @@
           <p class="text-slate-800 shadow-sm w-fit px-3 font-semibold">
             &copy; Recipe by {{ recipeDetail.recipe_owner }}
           </p>
-          <p class="text-slate-800 indent-3 text-sm pr-2">
+          <p class="text-slate-800 indent-3 text-sm pr-2 break-all" >
             {{ recipeDetail.description }}
           </p>
           <RateRecipe
