@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = "https://rocky-journey-92122.herokuapp.com/";
+const baseURL = "https://food-recipe-api-y521.onrender.com";
 
 const app = axios.create({
   baseURL,
