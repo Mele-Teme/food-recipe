@@ -14,7 +14,7 @@ import {
 import { setContext } from "@apollo/client/link/context";
 
 const httpLink = new HttpLink({
-  uri: "https://online-food-recipe-app.herokuapp.com/v1/graphql",
+  uri: "https://food-recipe-app-mele.hasura.app/v1/graphql",
 });
 const authLink = setContext((_, { headers }) => {
   const token = store.state.accessToken;
